@@ -4,7 +4,7 @@ module.exports = {
   webpackFinal: (config) => {
     config.module.rules.push({
       test: /\.tsx?$/,
-      use: ['ts-loader', 'react-docgen-typescript-loader'],
+      use: ['babel-loader', 'ts-loader', 'react-docgen-typescript-loader'],
     })
     config.resolve.extensions.push('.ts', '.tsx')
     return config
